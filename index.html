@@ -44,16 +44,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Poliana Lima - Pianist and Piano Teacher</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Crimson+Text&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Crimson+Text&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/tone@14.7.77/build/Tone.js"></script>
   <meta name="description" content="Online and in-person piano lessons with a pianist graduated in Bachelor in Music from UFRGS. Explore my work and book a lesson!">
   <style>
     body {
       font-family: 'Crimson Text', serif;
-      background-color: #e6f0ea;
+      background-color: #f8f4e8;
+      color: #8b4513;
+      font-size: 10rem;
+    }
+    .crimson-text {
+      font-family: 'Crimson Text', serif;
+      font-size: 10rem;
     }
     h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Dancing Script', cursive;
+    }
+    .handwritten-title {
+      font-family: 'Dancing Script', cursive;
+      font-size: 5.6rem;
+      font-weight: 700;
+    }
+    .square-image {
+      width: 1800px;
+      height: 850px;
+      object-fit: cover;
+      border-radius: 8px;
     }
     .vintage-shadow {
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -72,7 +89,7 @@
     .white-key {
       width: 40px;
       height: 200px;
-      background: #ffffff;
+      background: #f8f4e8;
       border: 1px solid #000000;
       display: inline-block;
       cursor: pointer;
@@ -94,31 +111,36 @@
     }
   </style>
 </head>
-<body class="bg-[#e6f0ea]" id="body">
+<body class="bg-[#f8f4e8] text-[#8b4513]" id="body">
   <!-- Navbar -->
-  <nav class="bg-[#d4c4d6] text-[#4a4a4a] p-4 vintage-shadow">
-    <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-3xl font-bold">Poliana Lima</h1>
-      <div>
-        <ul class="flex space-x-4 text-lg">
-          <li><a href="#home" class="hover:underline hover:text-[#c0a9c2]" id="nav-home">Home</a></li>
-          <li><a href="#sobre" class="hover:underline hover:text-[#c0a9c2]" id="nav-about">About</a></li>
-          <li><a href="#aulas" class="hover:underline hover:text-[#c0a9c2]" id="nav-lessons">Lessons</a></li>
-          <li><a href="#portfolio" class="hover:underline hover:text-[#c0a9c2]" id="nav-portfolio">Portfolio</a></li>
-          <li><a href="#contato" class="hover:underline hover:text-[#c0a9c2]" id="nav-contact">Contact</a></li>
+  <nav class="bg-[#8b4513] text-[#f8f4e8] p-4 vintage-shadow">
+    <div class="container mx-auto">
+      <!-- Centered title -->
+      <div class="text-center mb-4">
+        <h1 class="handwritten-title">Poliana Lima</h1>
+      </div>
+      
+      <!-- Navigation items below title -->
+      <div class="relative h-12">
+        <ul class="flex space-x-4 text-3xl absolute left-1/2 transform -translate-x-1/2">
+          <li><a href="#home" class="hover:underline hover:text-[#daa520]" id="nav-home">Home</a></li>
+          <li><a href="#sobre" class="hover:underline hover:text-[#daa520]" id="nav-about">Sobre</a></li>
+          <li><a href="#aulas" class="hover:underline hover:text-[#daa520]" id="nav-lessons">Aulas</a></li>
+          <li><a href="#portfolio" class="hover:underline hover:text-[#daa520]" id="nav-portfolio">Portfólio</a></li>
+          <li><a href="#contato" class="hover:underline hover:text-[#daa520]" id="nav-contact">Contato</a></li>
         </ul>
-        <button id="language-toggle" class="ml-4 bg-[#f4e1e0] text-[#4a4a4a] py-1 px-3 rounded-full hover:bg-[#e0c9c8] vintage-shadow">Switch to Português</button>
+        <button id="language-toggle" class="absolute right-0 top-0 bg-[#daa520] text-[#8b4513] py-2 px-4 rounded-full hover:bg-[#b8860b] vintage-shadow text-lg">Switch to English</button>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section com Piano -->
-  <section id="home" class="bg-[#f4e1e0] text-[#4a4a4a] py-20 text-center vintage-shadow relative">
+  <section id="home" class="bg-[#f5deb3] text-[#8b4513] py-6 text-center vintage-shadow relative">
     <div class="container mx-auto">
-      <img src="https://www.instagram.com/p/DIHNJzRp9oh/?img_index=1" alt="Poliana Lima at the piano" class="w-full max-w-2xl mx-auto mb-6 rounded-lg vintage-shadow">
-      <h2 class="text-5xl font-bold mb-4" id="hero-title">Welcome to My Musical World</h2>
-      <p class="text-xl mb-6 max-w-2xl mx-auto" id="hero-text">Pianist and Master Student in Interpretive Practices from UFRGS, I offer personalized piano lessons and emotional performances.</p>
-      <a href="#contato" class="bg-[#f4e1e0] text-[#4a4a4a] py-3 px-6 rounded-full hover:bg-[#e0c9c8] vintage-shadow" id="hero-button">Book a Lesson</a>
+      <img src="poliana-piano.jpg" alt="Poliana Lima at the piano" class="square-image mx-auto mb-6 vintage-shadow">
+      <h2 class="text-6xl font-bold mb-4" id="hero-title">Bem-vindo(a) ao meu mundo musical!</h2>
+      <p class="text-3xl mb-6 max-w-3xl mx-auto" id="hero-text">Pianista e mestranda em Práticas Interpretativas pela UFRGS, ofereço aulas de piano personalizadas e performances que emocionam.</p>
+      <a href="#contato" class="bg-[#daa520] text-[#8b4513] py-4 px-8 rounded-full hover:bg-[#b8860b] vintage-shadow text-xl" id="hero-button">Agende sua Aula</a>
       <div class="piano-container">
         <div class="piano" id="piano"></div>
       </div>
@@ -126,59 +148,59 @@
   </section>
 
   <!-- About -->
-  <section id="sobre" class="py-16 text-[#4a4a4a]">
+  <section id="sobre" class="py-16 text-[#8b4513]">
     <div class="container mx-auto text-center">
-      <h3 class="text-4xl font-bold mb-6" id="about-title">About Me</h3>
-      <p class="text-lg max-w-2xl mx-auto" id="about-text">I am a pianist with a degree in Bachelor of Music from UFRGS, specializing in interpretive practices. I love teaching piano, music theory, and ear training, connecting students to music with emotion and technique.</p>
+      <h3 class="text-5xl font-bold mb-6" id="about-title">Sobre Mim</h3>
+      <p class="text-3xl mb-6 max-w-3xl mx-auto" id="about-text">Sou pianista com formação no Bacharelado de Música pela UFRGS, me especializando em práticas interpretativas. Minha paixão é ensinar piano, teoria musical e treinamento auditivo, conectando alunos à música com emoção e técnica.</p>
     </div>
   </section>
 
   <!-- Lessons -->
-  <section id="aulas" class="bg-[#e0e7f0] py-16 text-[#4a4a4a] vintage-shadow">
+  <section id="aulas" class="bg-[#deb887] py-16 text-[#8b4513] vintage-shadow">
     <div class="container mx-auto text-center">
-      <h3 class="text-4xl font-bold mb-6" id="lessons-title">Piano Lessons</h3>
-      <p class="text-lg max-w-2xl mx-auto mb-6" id="lessons-text">I offer online and in-person lessons for all levels, including piano, music theory, and ear training. Personalized classes for beginners, intermediates, and advanced students.</p>
-      <a href="#contato" class="bg-[#d4c4d6] text-[#4a4a4a] py-3 px-6 rounded-full hover:bg-[#c0a9c2] vintage-shadow" id="lessons-button">Learn More</a>
+      <h3 class="text-5xl font-bold mb-6" id="lessons-title">Aulas de Piano</h3>
+      <p class="text-3xl mb-6 max-w-3xl mx-auto" id="lessons-text">Ofereço aulas online e presenciais para todos os níveis, incluindo piano, teoria musical e treinamento auditivo. Aulas personalizadas para iniciantes, intermediários e avançados.</p>
+      <a href="#contato" class="bg-[#daa520] text-[#8b4513] py-4 px-8 rounded-full hover:bg-[#b8860b] vintage-shadow text-xl" id="lessons-button">Saiba Mais</a>
     </div>
   </section>
 
   <!-- Portfolio -->
-  <section id="portfolio" class="py-16 text-[#4a4a4a]">
+  <section id="portfolio" class="py-16 text-[#8b4513]">
     <div class="container mx-auto text-center">
-      <h3 class="text-4xl font-bold mb-6" id="portfolio-title">Portfolio</h3>
-      <p class="text-lg max-w-2xl mx-auto mb-6" id="portfolio-text">Watch my performances, including pieces by Chopin, Beethoven, and Bach</p>
+      <h3 class="text-5xl font-bold mb-6" id="portfolio-title">Portfólio</h3>
+      <p class="text-3xl mb-6 max-w-3xl mx-auto" id="portfolio-text">Assista às minhas performances, incluindo peças de Chopin, Beethoven e Bach</p>
       <div class="flex justify-center">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/SUA_Video_ID" title="Piano Performance" frameborder="0" allowfullscreen class="rounded-lg vintage-shadow"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5JdNxjYWxZY" title="Piano Performance" frameborder="0" allowfullscreen class="rounded-lg vintage-shadow"></iframe>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contato" class="bg-[#f5f0e0] text-[#4a4a4a] py-16 vintage-shadow">
+  <section id="contato" class="bg-[#f5deb3] text-[#8b4513] py-16 vintage-shadow">
     <div class="container mx-auto text-center">
-      <h3 class="text-4xl font-bold mb-6" id="contact-title">Get in Touch</h3>
-      <p class="text-lg max-w-2xl mx-auto mb-6" id="contact-text">Interested in lessons or performances? Send me a message!</p>
+      <h3 class="text-5xl font-bold mb-6" id="contact-title">Entre em Contato</h3>
+      <p class="text-3xl mb-6 max-w-3xl mx-auto" id="contact-text">Interessado em aulas ou apresentações? Envie uma mensagem!</p>
       <div class="max-w-md mx-auto">
-        <input type="text" placeholder="Name" class="w-full p-3 mb-4 rounded-lg bg-[#e6f0ea] text-[#4a4a4a] vintage-shadow" id="contact-name">
-        <input type="email" placeholder="Email" class="w-full p-3 mb-4 rounded-lg bg-[#e6f0ea] text-[#4a4a4a] vintage-shadow" id="contact-email">
-        <textarea placeholder="Message" class="w-full p-3 mb-4 rounded-lg bg-[#e6f0ea] text-[#4a4a4a] vintage-shadow" rows="4" id="contact-message"></textarea>
-        <button class="bg-[#f4e1e0] text-[#4a4a4a] py-3 px-6 rounded-full hover:bg-[#e0c9c8] vintage-shadow" id="contact-button">Send</button>
+        <input type="text" placeholder="Nome" class="w-full p-4 mb-4 rounded-lg bg-[#f8f4e8] text-[#8b4513] vintage-shadow text-lg" id="contact-name">
+        <input type="email" placeholder="E-mail" class="w-full p-4 mb-4 rounded-lg bg-[#f8f4e8] text-[#8b4513] vintage-shadow text-lg" id="contact-email">
+        <textarea placeholder="Mensagem" class="w-full p-4 mb-4 rounded-lg bg-[#f8f4e8] text-[#8b4513] vintage-shadow text-lg" rows="4" id="contact-message"></textarea>
+        <button class="bg-[#daa520] text-[#8b4513] py-4 px-8 rounded-full hover:bg-[#b8860b] vintage-shadow text-xl" id="contact-button">Enviar</button>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#d4c4d6] text-[#4a4a4a] p-4 text-center vintage-shadow">
-    <p>&copy; 2025 Poliana Lima. All rights reserved.</p>
+  <footer class="bg-[#8b4513] text-[#f8f4e8] p-4 text-center vintage-shadow">
+    <p class="text-lg">&copy; 2025 Poliana Lima. All rights reserved.</p>
     <div class="flex justify-center space-x-4 mt-2">
-      <a href="https://www.youtube.com/@polianapiano" class="hover:underline hover:text-[#c0a9c2]" id="footer-youtube">YouTube</a>
-      <a href="https://www.instagram.com/polianapiano/" class="hover:underline hover:text-[#c0a9c2]" id="footer-instagram">Instagram</a>
-      <a href="https://x.com/polianapiano" class="hover:underline hover:text-[#c0a9c2]" id="footer-x">X</a>
+      <a href="https://www.youtube.com/@polianapiano" class="hover:underline hover:text-[#daa520] text-lg" id="footer-youtube">YouTube</a>
+      <a href="https://www.instagram.com/polianapiano/" class="hover:underline hover:text-[#daa520] text-lg" id="footer-instagram">Instagram</a>
+      <a href="https://x.com/polianapiano" class="hover:underline hover:text-[#daa520] text-lg" id="footer-x">X</a>
     </div>
   </footer>
 
   <script>
-    let lang = 'en';
+    let lang = 'pt';
     const translations = {
       en: {
         'nav-home': 'Home',
@@ -186,7 +208,7 @@
         'nav-lessons': 'Lessons',
         'nav-portfolio': 'Portfolio',
         'nav-contact': 'Contact',
-        'hero-title': 'Welcome to My Musical World',
+        'hero-title': 'Welcome to my musical world!',
         'hero-text': 'Pianist and Master Student in Interpretive Practices from UFRGS, I offer personalized piano lessons and emotional performances.',
         'hero-button': 'Book a Lesson',
         'about-title': 'About Me',
@@ -249,7 +271,14 @@
     });
 
     // Inicializa o sintetizador do Tone.js
-    const synth = new Tone.Synth().toDestination();
+    const synth = new Tone.Sampler({
+      urls: {
+        "C4": "C4.mp3",
+        "D#4": "Ds4.mp3", 
+        "F#4": "Fs4.mp3",
+      },
+      baseUrl: "https://tonejs.github.io/audio/salamander/",
+    }).toDestination();
 
     // Configuração das notas e seus offsets
     const whiteKeyWidth = 40;
@@ -285,7 +314,7 @@
       key.className = type === "white" ? "white-key" : "black-key";
       if (type === "black") key.style.left = `${offset}px`;
       key.addEventListener("click", () => {
-        synth.triggerAttackRelease(note, "8n");
+        synth.triggerAttackRelease(note, 1);
       });
       piano.appendChild(key);
     });
