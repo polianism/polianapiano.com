@@ -201,17 +201,18 @@
         width: 100%;
       }
       .nav-items {
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
         justify-content: center;
         align-items: center;
-        gap: 0.5rem;
         position: static;
         transform: none;
         left: auto;
         width: 100%;
       }
       .nav-items li {
-        font-size: 1rem;
+        font-size: 2.5rem;
         text-align: center;
       }
       /* Section padding adjustments */
@@ -284,7 +285,7 @@
         height: 250px;
       }
       .nav-items li {
-        font-size: 0.875rem;
+        font-size: 1rem;
       }
       h2, h3 {
         font-size: 1.5rem;
