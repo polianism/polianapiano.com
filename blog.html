@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Poliana Lima</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Crimson+Text&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Blog da Poliana Lima - Artigos sobre música, piano e educação musical">
+  <style>
+    body {
+      font-family: 'Crimson Text', serif;
+      background-color: #f8f4e8;
+      color: #8b4513;
+      font-size: 1.125rem;
+    }
+    .crimson-text {
+      font-family: 'Crimson Text', serif;
+      font-size: 1.125rem;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Dancing Script', cursive;
+    }
+    .handwritten-title {
+      font-family: 'Dancing Script', cursive;
+      font-size: 4.5rem;
+      font-weight: 700;
+    }
+    .vintage-shadow {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Navigation styles */
+    .nav-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      width: 100%;
+    }
+    .nav-items {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 1rem;
+      font-size: 1.5rem;
+      justify-content: center;
+      align-items: center;
+    }
+    .nav-items li a {
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    /* Blog styles */
+    .blog-post {
+      background: #f8f4e8;
+      border: 2px solid #8b4513;
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .blog-post:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(139, 69, 19, 0.2);
+    }
+    .blog-date {
+      color: #daa520;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+    .blog-title {
+      color: #8b4513;
+      font-size: 2rem;
+      margin: 0.5rem 0;
+    }
+    .blog-excerpt {
+      color: #8b4513;
+      line-height: 1.6;
+      margin: 1rem 0;
+    }
+    .read-more {
+      color: #daa520;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .read-more:hover {
+      color: #b8860b;
+    }
+    
+    /* Mobile responsive styles */
+    @media (max-width: 768px) {
+      body {
+        font-size: 1rem;
+      }
+      .handwritten-title {
+        font-size: 3rem;
+      }
+      .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+        height: auto;
+        min-height: 80px;
+        width: 100%;
+      }
+      .nav-items {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        position: static;
+        transform: none;
+        left: auto;
+        width: 100%;
+      }
+      .nav-items li {
+        font-size: 1rem;
+        text-align: center;
+      }
+      .blog-post {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .blog-title {
+        font-size: 1.5rem;
+      }
+      section {
+        padding: 2rem 1rem;
+      }
+      .container {
+        padding: 0 1rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .handwritten-title {
+        font-size: 2.5rem;
+      }
+      .nav-items {
+        flex-direction: column;
+        gap: 0.25rem;
+        width: 100%;
+      }
+      .nav-items li {
+        margin: 0.25rem 0;
+        text-align: center;
+        width: 100%;
+      }
+      .blog-post {
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+      .blog-title {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#f8f4e8] text-[#8b4513]" id="body">
+  <!-- Navbar -->
+  <nav class="bg-[#8b4513] text-[#f8f4e8] p-4 vintage-shadow">
+    <div class="container mx-auto">
+      <!-- Centered title -->
+      <div class="text-center mb-4">
+        <h1 class="handwritten-title">Poliana Lima</h1>
+      </div>
+      
+      <!-- Navigation items below title -->
+      <div class="nav-container">
+        <ul class="nav-items">
+          <li><a href="index.html" class="hover:underline hover:text-[#daa520]">Home</a></li>
+          <li><a href="index.html#sobre" class="hover:underline hover:text-[#daa520]">Sobre</a></li>
+          <li><a href="index.html#aulas" class="hover:underline hover:text-[#daa520]">Aulas</a></li>
+          <li><a href="index.html#portfolio" class="hover:underline hover:text-[#daa520]">Portfólio</a></li>
+          <li><a href="index.html#contato" class="hover:underline hover:text-[#daa520]">Contato</a></li>
+          <li><a href="blog.html" class="hover:underline hover:text-[#daa520] font-bold">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Blog Section -->
+  <section class="py-16">
+    <div class="container mx-auto">
+      <h2 class="text-5xl font-bold mb-8 text-center">Blog Musical</h2>
+      <p class="text-2xl mb-12 text-center max-w-3xl mx-auto">Artigos sobre música, piano e educação musical</p>
+      
+      <!-- Blog Posts -->
+      <div class="max-w-4xl mx-auto">
+        <!-- Post 1 -->
+        <article class="blog-post vintage-shadow">
+          <div class="blog-date">15 de Janeiro, 2025</div>
+          <h3 class="blog-title">Como Escolher seu Primeiro Piano</h3>
+          <p class="blog-excerpt">
+            Escolher o primeiro piano pode ser uma decisão intimidadora. Neste artigo, compartilho dicas práticas sobre como escolher entre piano acústico e digital, considerando espaço, orçamento e objetivos musicais...
+          </p>
+          <a href="#" class="read-more">Ler mais →</a>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="blog-post vintage-shadow">
+          <div class="blog-date">10 de Janeiro, 2025</div>
+          <h3 class="blog-title">Técnicas de Respiração para Pianistas</h3>
+          <p class="blog-excerpt">
+            A respiração é fundamental para a performance musical. Descubra como técnicas de respiração adequadas podem melhorar sua expressão musical e resistência durante longas sessões de prática...
+          </p>
+          <a href="#" class="read-more">Ler mais →</a>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="blog-post vintage-shadow">
+          <div class="blog-date">5 de Janeiro, 2025</div>
+          <h3 class="blog-title">A Importância da Teoria Musical</h3>
+          <p class="blog-excerpt">
+            Muitos estudantes querem pular a teoria musical e ir direto para as músicas. Neste artigo, explico por que a teoria é essencial e como ela pode acelerar seu progresso no piano...
+          </p>
+          <a href="#" class="read-more">Ler mais →</a>
+        </article>
+
+        <!-- Post 4 -->
+        <article class="blog-post vintage-shadow">
+          <div class="blog-date">1 de Janeiro, 2025</div>
+          <h3 class="blog-title">Dicas para Praticar Piano em Casa</h3>
+          <p class="blog-excerpt">
+            A prática em casa é onde acontece o verdadeiro progresso. Compartilho estratégias eficazes para maximizar suas sessões de prática, incluindo organização do tempo e técnicas de estudo...
+          </p>
+          <a href="#" class="read-more">Ler mais →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#8b4513] text-[#f8f4e8] p-4 text-center vintage-shadow">
+    <p class="text-lg">&copy; 2025 Poliana Lima. All rights reserved.</p>
+    <div class="flex justify-center space-x-4 mt-2 mb-4">
+      <a href="https://www.youtube.com/@polianapiano" class="hover:underline hover:text-[#daa520] text-lg">YouTube</a>
+      <a href="https://www.instagram.com/polianapiano/" class="hover:underline hover:text-[#daa520] text-lg">Instagram</a>
+      <a href="https://x.com/polianapiano" class="hover:underline hover:text-[#daa520] text-lg">X</a>
+    </div>
+    <div class="flex justify-center">
+      <a href="index.html" class="bg-[#daa520] text-[#8b4513] py-2 px-4 rounded-full hover:bg-[#b8860b] vintage-shadow text-lg transition-colors duration-300">Voltar ao Site Principal</a>
+    </div>
+  </footer>
+</body>
+</html> 
